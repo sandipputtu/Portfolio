@@ -1,0 +1,18 @@
+.raw_logo {
+  height: 305;
+  width: 440;
+}
+
+/* Lottie Loader Animation Styles */
+.lottie-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.lottie-loader-container svg {
+  max-width: 400px;
+  height: auto;
+}

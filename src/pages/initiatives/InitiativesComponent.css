@@ -1,0 +1,117 @@
+.initiatives-main {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure header gets full width - override any constraints */
+.initiatives-main > .react-reveal,
+.initiatives-main > header,
+.initiatives-main .header {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.initiatives-main .header {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.basic-initiatives {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.heading-div {
+  display: flex;
+}
+
+.heading-div > * {
+  flex: 1;
+}
+
+.heading-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-text-div {
+  text-align: center;
+}
+
+.heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.heading-sub-text {
+  font-size: 30px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.initiatives-list {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  color: #333;
+}
+
+.initiatives-list li {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading-text {
+    font-size: 36px;
+    margin-top: 40px;
+  }
+
+  .heading-sub-text {
+    font-size: 20px;
+  }
+
+  .initiatives-list {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .initiatives-list li {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-text {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .heading-sub-text {
+    font-size: 16px;
+  }
+
+  .initiatives-list {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+}

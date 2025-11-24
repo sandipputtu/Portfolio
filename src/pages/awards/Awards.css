@@ -1,0 +1,150 @@
+/* awards-main wrapper - uses full screen width */
+.awards-main {
+  width: 100%;
+  min-height: 100vh;
+  /* overflow-x: hidden; */
+}
+
+.basic-awards {
+  width: 100vw;
+  max-width: 1200px;
+  padding: 20px 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.awards-heading-div {
+  display: flex;
+}
+
+.awards-heading-div > * {
+  flex: 1;
+}
+
+.awards-heading-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.awards-heading-text-div {
+  text-align: center;
+}
+
+.awards-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.awards-heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.awards-heading-sub-text {
+  font-size: 30px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .awards-heading-text {
+    font-size: 36px;
+    margin-top: 40px;
+  }
+
+  .awards-heading-sub-text {
+    font-size: 20px;
+  }
+
+  .awards-body-div .card {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .awards-body-div .media-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .awards-body-div .media-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-heading-text {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .awards-heading-sub-text {
+    font-size: 16px;
+  }
+
+  .awards-body-div .card {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .awards-body-div .media-item h3 {
+    font-size: 1rem;
+  }
+
+  .awards-body-div .media-item p.muted,
+  .awards-body-div .media-item li {
+    font-size: 0.9rem;
+  }
+}
+
+.awards-body-div .card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.awards-body-div .media-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.awards-body-div .media-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.awards-body-div .media-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.awards-body-div .media-item p.muted {
+  color: #666;
+  font-size: 1rem;
+}
+
+.awards-body-div .media-item ul {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+
+.awards-body-div .media-item li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,436 @@
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+
+.greet-main {
+  width: 100%;
+  max-width: 1400px;
+  padding: 60px 40px;
+  margin: 0px auto;
+  margin-top: 2rem;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+}
+
+.gretting-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+}
+
+.greeting-main {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+.greeting-main > * {
+  flex: 1;
+}
+
+.greeting-text-div {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+}
+
+.greeting-content {
+  width: 100%;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.greeting-intro {
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.greeting-hello {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  display: inline-block;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.button-greeting-div {
+  display: flex;
+  margin-top: 20px;
+  gap: 16px;
+}
+
+.greeting-text {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  font-family: "Google Sans Bold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, currentColor 0%, currentColor 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+  position: relative;
+}
+
+.greeting-text::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, currentColor, transparent);
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out 0.8s both;
+}
+
+.greeting-nickname {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.4;
+  font-family: "Google Sans Bold Italic", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  opacity: 0.85;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.greeting-text-p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.7;
+  margin-right: 0;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  font-family: "Google Sans Medium", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  max-width: 600px;
+  opacity: 0.9;
+  animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+.greeting-social-wrapper {
+  margin-top: 40px;
+  animation: fadeInUp 0.8s ease-out 0.9s both;
+}
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.greeting-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-image-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.greeting-image {
+  position: relative;
+  max-height: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.greeting-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design - Large Desktop */
+@media (max-width: 1600px) {
+  .greet-main {
+    padding: 50px 30px;
+  }
+
+  .greeting-main {
+    gap: 40px;
+  }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1380px) {
+  .greet-main {
+    padding: 40px 30px;
+  }
+
+  .greeting-main {
+    gap: 40px;
+  }
+
+  .greeting-text {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .greeting-text-p {
+    font-size: clamp(0.95rem, 1.3vw, 1.25rem);
+  }
+
+  .greeting-image {
+    max-height: 500px;
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .greet-main {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .greeting-main {
+    gap: 30px;
+  }
+
+  .greeting-text-div {
+    min-height: auto;
+  }
+
+  .greeting-image {
+    max-height: 450px;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .greet-main {
+    padding: 30px 20px;
+    margin-top: 1rem;
+  }
+
+  .greeting-main {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .greeting-text-div {
+    order: 2;
+    min-height: auto;
+  }
+
+  .greeting-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .greeting-hello {
+    font-size: 1rem;
+  }
+
+  .greeting-text {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .greeting-text::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .greeting-nickname {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    text-align: center;
+  }
+
+  .greeting-text-p {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    margin-right: 0;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .greeting-social-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .greeting-image-div {
+    order: 1;
+    margin-bottom: 0;
+    padding: 10px;
+  }
+
+  .greeting-image-wrapper {
+    max-width: 350px;
+  }
+
+  .greeting-image {
+    max-height: 400px;
+    border-radius: 15px;
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .portfolio-repo-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 480px) {
+  .greet-main {
+    padding: 20px 15px;
+  }
+
+  .greeting-main {
+    gap: 30px;
+  }
+
+  .greeting-hello {
+    font-size: 0.9rem;
+  }
+
+  .greeting-text {
+    font-size: clamp(1.75rem, 10vw, 2.25rem);
+    margin-bottom: 12px;
+  }
+
+  .greeting-nickname {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+    margin-bottom: 16px;
+  }
+
+  .greeting-text-p {
+    font-size: clamp(0.875rem, 4.5vw, 1rem);
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .greeting-social-wrapper {
+    margin-top: 24px;
+  }
+
+  .greeting-image-wrapper {
+    max-width: 280px;
+  }
+
+  .greeting-image {
+    max-height: 320px;
+    border-radius: 12px;
+  }
+
+  .greeting-image-background {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .greeting-text,
+  .greeting-nickname,
+  .greeting-text-p,
+  .greeting-hello,
+  .greeting-social-wrapper,
+  .greeting-image {
+    animation: none;
+  }
+
+  .greeting-image:hover {
+    transform: none;
+  }
+
+  .greeting-image-background {
+    animation: none;
+  }
+}
